@@ -250,4 +250,12 @@ bundle exec rake admin:create
 ```
 bundle exec rails s -b 0.0.0.0 
 ```
-### open browser on http://localhost:3000 and you should see Discourse
+### Discourse on Akash
+
+Find your host and ports in your Akash lease status
+
+```
+akash provider lease-status --node $AKASH_NODE --home ~/.akash --dseq $AKASH_DSEQ --from $AKASH_KEY_NAME --provider $AKASH_PROVIDER
+```
+
+open browser on http://host:3000 and you should see Discourse
