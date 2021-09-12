@@ -14,7 +14,12 @@ Update deploy.yaml with your newly built docker image. ( or keep the prebuilt im
 
 | | |
 --- | --- 
-|akash:|`comingsoon`|
+|akash:|`comingsoon - need to create my public tipping AKT wallet`|
+
+### Buy Tom a coffee to keep his work going and for https://github.com/coffeeroaster/akash-ubuntu
+
+|akash:|`akash1k07dv0wcjej4e4a5z9dg3c6yvvf9mcnz0sacp9`|
+|monero:| `88z2xaJaRPVc5VXtE3CArxeAkqSQV8aA4EhswR8pqfY3CghQfaD7nYsLvmcnXuHj1TYDeJaGvyyyW9XyX6ka7BLzQ7ypmqJ`|
 
 ## Prepare your ssh session
 
@@ -160,6 +165,9 @@ q
 ```
 exit
 ```
+```
+exit
+```
 
 ## Install NVM & Node
 
@@ -206,6 +214,7 @@ apt-get install libpq-dev
 ```
 bundle install
 ```
+If you get an error just run bundle install again
 
 ### Check postgres server status
 
