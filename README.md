@@ -16,7 +16,7 @@ Update deploy.yaml with your newly built docker image. ( or keep the prebuilt im
 --- | --- 
 |akash:|`comingsoon - need to create my public tipping AKT wallet`|
 
-### Buy Tom a coffee to keep his work going and for https://github.com/coffeeroaster/akash-ubuntu
+### Buy Coffeeroaster a coffee to keep his work going and for https://github.com/coffeeroaster/akash-ubuntu
 
 |akash:|`akash1k07dv0wcjej4e4a5z9dg3c6yvvf9mcnz0sacp9`|
 |monero:| `88z2xaJaRPVc5VXtE3CArxeAkqSQV8aA4EhswR8pqfY3CghQfaD7nYsLvmcnXuHj1TYDeJaGvyyyW9XyX6ka7BLzQ7ypmqJ`|
@@ -267,4 +267,4 @@ Find your host and ports in your Akash lease status
 akash provider lease-status --node $AKASH_NODE --home ~/.akash --dseq $AKASH_DSEQ --from $AKASH_KEY_NAME --provider $AKASH_PROVIDER
 ```
 
-open browser on http://host:3000 and you should see Discourse
+open browser on http://host:3000 and you should see Discourse  note: currently this seems to run, but having problems with ports
