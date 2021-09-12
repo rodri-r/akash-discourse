@@ -86,3 +86,168 @@ If things are still not working you can set "debug=true" in the environment vari
 
 
 # Preparing your Ubuntu install
+
+## Install Ruby and Ruby Version Manager
+
+```
+command curl -sSL https://rvm.io/mpapis.asc | gpg2 --import -
+```
+```
+command curl -sSL https://rvm.io/pkuczynski.asc | gpg2 --import -
+```
+```
+curl -sSL https://get.rvm.io | bash -s stable
+```
+```
+echo 'gem: --no-document' >> ~/.gemrc
+```
+```
+source /usr/local/rvm/scripts/rvm
+```
+```
+rvm --version
+```
+
+## Upgrade Ruby, set default version & install
+
+```
+rvm install 2.6.2
+```
+```
+rvm --default use 2.6.2
+```
+```
+gem install bundler mailcatcher rake
+```
+
+## Start Postgresql server and setup database
+
+```
+service postgresql start
+```
+
+### login to postgres cli
+
+```
+sudo -u postgres -i
+```
+### create database, create user and make them a superuser
+
+```
+psql template1
+```
+```
+CREATE USER youruser WITH PASSWORD 'yourpassword';
+```
+```
+CREATE DATABASE discourse_development;
+```
+```
+GRANT ALL PRIVILEGES ON DATABASE discourse_development to youruser;
+```
+```
+ALTER USER youruser WITH SUPERUSER;
+```
+
+### confirm and exit
+
+```
+\du
+```
+```
+\q
+```
+```
+exit
+```
+
+## Install NVM & Node
+
+### NVM
+
+```
+curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.2/install.sh | bash
+```
+
+### Setup path
+
+```
+export NVM_DIR="$HOME/.nvm"
+```
+
+### Check path works
+
+```
+nvm --version
+```
+### Install Node & set default version
+
+```
+nvm install node
+```
+```
+nvm alias default node
+```
+```
+npm install -g svgo
+```
+
+# Install Discourse
+
+```
+git clone https://github.com/discourse/discourse.git ~/discourse
+```
+```
+cd ~/discourse
+```
+```
+apt-get install libpq-dev
+```
+```
+bundle install
+```
+
+### Check postgres server status
+
+```
+service postgresql status
+```
+### If it is not running, start it
+
+```
+service postgresql start
+```
+
+### Run Redis Server in the background
+
+```
+redis-server --daemonize yes
+```
+
+### Create the database and run migrations
+
+```
+bundle exec rake db:create
+```
+```
+bundle exec rake db:migrate
+```
+```
+RAILS_ENV=test bundle exec rake db:create db:migrate
+```
+
+###Create an admin account with:
+
+```
+bundle exec rake admin:create
+```
+#### Follow the steps for setting up admin email and password
+
+## FINALLY
+
+### Launch Discourse on Akash
+
+```
+bundle exec rails s -b 0.0.0.0 
+```
+### open browser on http://localhost:3000 and you should see Discourse
