@@ -1,7 +1,7 @@
 # akash-discourse
 This will deploy a Discourse forum on Akash
 
-# Setup an "ssh" ubuntu image on [ Akash ](https://akash.network)  
+## Setup an "ssh" ubuntu image on [ Akash ](https://akash.network)  
 
 ## Optional : build custom Docker image (recommended)
 Update Dockerfile with your needs.
