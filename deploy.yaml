@@ -12,8 +12,10 @@ services:
         as: 22000
         to:
           - global: true
-        port: 3000
-        as: 33378
+      - port: 3000
+        to:
+          - global: true
+      - port: 8080
         to:
           - global: true
 
