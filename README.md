@@ -155,7 +155,7 @@ ALTER USER youruser WITH SUPERUSER;
 \du
 ```
 ```
-\q
+q
 ```
 ```
 exit
