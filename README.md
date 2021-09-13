@@ -14,7 +14,7 @@ Update deploy.yaml with your newly built docker image. ( or keep the prebuilt im
 
 | | |
 --- | --- 
-|akash:|`comingsoon - need to create my public tipping AKT wallet`|
+|akash:|`akash178d5wcg95z2jc5au608a9scshvwy3stwt3cgmq`|
 
 ### Buy Coffeeroaster a coffee to keep his work going and for https://github.com/coffeeroaster/akash-ubuntu
 
